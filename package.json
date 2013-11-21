@@ -1,0 +1,30 @@
+{
+  "name": "julian",
+  "version": "0.0.0",
+  "description": "Convert between Date object and Julian dates used in astronomy and history",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevebest/julian.git"
+  },
+  "keywords": [
+    "julian",
+    "date",
+    "conversion",
+    "epoch",
+    "time",
+    "calendar",
+    "astronomy"
+  ],
+  "author": "Stepan Stolyarov <stepan.stolyarov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevebest/julian-date/issues"
+  },
+  "devDependencies": {
+    "tap": "~0.4.6"
+  }
+}
