@@ -1,6 +1,6 @@
 {
   "name": "julian",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Convert between Date object and Julian dates used in astronomy and history",
   "main": "index.js",
   "scripts": {
