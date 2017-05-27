@@ -12,13 +12,15 @@ test('from Date to JD', function (t) {
 });
 
 test('from JD to Date', function (t) {
-  t.equal(julian.toDate('2440587.500000').value, new Date(0).value, 'unix epoch');
-  t.equal(julian.toDate('2451545.000000').value, new Date('2000-01-01T12:00:00.000Z').value, 'noon of Jan 1, 2000');
+  t.equal(+julian.toDate('2440587.500000'), +new Date(0), 'unix epoch');
+  t.equal(+julian.toDate('2451545.000000'), +new Date('2000-01-01T12:00:00.000Z'), 'noon of Jan 1, 2000');
   t.end();
 });
 
 test('to JD and back', function (t) {
   var now = new Date();
-  t.equal(julian.toDate(julian(now)).value, now.value);
+  t.equal(+julian.toDate(julian(now)), +now);
   t.end();
 });
+
+
