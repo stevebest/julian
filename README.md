@@ -24,6 +24,37 @@ Convert a `Date` into a string representing Julian Date.
 
 Convert a Julian Date to a javascript `Date`.
 
+### julian.toJulianDay(date)
+
+return a javascript `Date` or `timestamp` to the julian day.
+An integer day is returned.
+
+### julian.toMillisecondsInJulianDay (date)
+
+returns the number of milliseconds since the start of
+the julian day. Note, the julian day starts at noon,
+not at midnight. This seems strange, if you don't have
+an accurate clock, then finding noon accurately is easy
+(from the sun) but finding midnight is not easy. Julian
+days have been used by astronomers since before accurate clocks.
+
+### julian.fromJulianDayAndMilliseconds(day, ms)
+
+Converts a julian day and ms back to a javascript timestamp.
+Also, note that this is reversable with out floating point errors.
+
+``` js
+var date = Date.now()
+
+assert.equal(
+  julian.fromJulianDayAndMilliseconds(
+    julian.toJulianDay(date),
+    julian.toMillisecondsInJulianDay(date)
+  ),
+  date
+)
+```
+
 ## notice
 
 Date systems are a mess. Leap years, leap seconds, epochs, different calendars using the same nomenclature, different countries using different calendars at the same time, etc.
@@ -41,3 +72,5 @@ MIT
 ## author
 
 Stepan Stolyarov <stepan.stolyarov@gmail.com>
+
+
